@@ -14,14 +14,14 @@ wandb = dict(
 )
 
 data = dict(
-    batch_datasets_folder = "C:\\Users\\gblai\\Documents\\github\\AgroKoncep\\Dataset",
-    dataset_name = "baseimg-batch1-augmented1",
+    batch_datasets_folder = "/home/blain/Pictures/AGROKONCEP_DATA/training/BATCH_1",
+    dataset_name = "baseimg_batch1_augmented1",
     dataset_config_name = "data.yaml",
 )
 
 dataset_abs_path = os.path.join(data["batch_datasets_folder"], data["dataset_name"], data["dataset_config_name"])
 
-model_size = MODEL_SIZE["MEDIUM"]  # Choose from MODEL_SIZE,
+model_size = MODEL_SIZE["NANO"]  # Choose from MODEL_SIZE,
 
 data_augmentation_kwargs = dict(
     hsv_h = 0.0,
@@ -45,8 +45,8 @@ train_kwargs = dict(
     epochs = 300,
     imgsz = 640,
     batch = -1,
-    workers = 10,
-    lr0 = 0.07,
+    workers = 8,
+    lr0 = 0.1,
     device = "0",
     patience = 75,
     **data_augmentation_kwargs

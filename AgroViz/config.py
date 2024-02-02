@@ -23,6 +23,7 @@ dataset_abs_path = os.path.join(data["batch_datasets_folder"], data["dataset_nam
 
 model_size = MODEL_SIZE["MEDIUM"]  # Choose from MODEL_SIZE,
 
+# https://docs.ultralytics.com/fr/usage/cfg/#augmentation
 data_augmentation_kwargs = dict(
     hsv_h = 0.0,
     hsv_s = 0.0,
@@ -46,7 +47,7 @@ train_kwargs = dict(
     imgsz = 640,
     batch = -1,
     workers = 10,
-    lr0 = 0.07,
+    lr0 = 0.02,
     device = "0",
     patience = 75,
     **data_augmentation_kwargs

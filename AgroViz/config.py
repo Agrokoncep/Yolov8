@@ -23,7 +23,7 @@ dataset_abs_path = os.path.join(data["batch_datasets_folder"], data["dataset_nam
 
 model_size = MODEL_SIZE["MEDIUM"]  # Choose from MODEL_SIZE,
 
-data_augmentation = dict(
+data_augmentation_kwargs = dict(
     hsv_h = 0.0,
     hsv_s = 0.0,
     hsv_v = 0.0,
@@ -37,8 +37,6 @@ data_augmentation = dict(
     mosaic = 0.0,
     mixup = 0.0,
     copy_paste = 0.0,
-    auto_augment = "randaugment",
-    erasing = 0.0,
 )
 
 train_kwargs = dict(
@@ -51,5 +49,5 @@ train_kwargs = dict(
     lr0 = 0.07,
     device = "0",
     patience = 75,
-    **data_augmentation
+    **data_augmentation_kwargs
 )

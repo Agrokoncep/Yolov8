@@ -17,7 +17,9 @@ def freeze_layer(trainer):
 
 if __name__ == '__main__':
     wandb.login(key=config.wandb.get("api_key"))
-    wandb.init(project=config.wandb.get("project_name"))
+    wandb.init(project=config.wandb.get("project_name"), 
+               notes=f"Dataset={config.data.get('dataset_name')} // model_size={config.model_size} // lr0={config.train_kwargs.get('lr0')} // batch={config.train_kwargs.get('batch')} // epochs={config.train_kwargs.get('epochs')} // workers={config.train_kwargs.get('workers')}"
+    )
     # Load a model
     model = YOLO(config.model_size)
     model.add_callback("on_train_start", freeze_layer)

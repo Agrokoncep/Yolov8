@@ -8,6 +8,8 @@ MODEL_SIZE = dict(
     XLARGE = "yolov8x.pt",
 )
 
+nb_freezed_layers = 5
+
 wandb = dict(
     api_key = '0a172795af06b84dd255b5192d3722a9d098af32',
     project_name = 'batch1',
@@ -15,13 +17,13 @@ wandb = dict(
 
 data = dict(
     batch_datasets_folder = "/home/blain/Pictures/AGROKONCEP_DATA/training/BATCH_1",
-    dataset_name = "baseimg_batch1_augmented1",
+    dataset_name = "batch1_augmented1",
     dataset_config_name = "data.yaml",
 )
 
 dataset_abs_path = os.path.join(data["batch_datasets_folder"], data["dataset_name"], data["dataset_config_name"])
 
-model_size = MODEL_SIZE["NANO"]  # Choose from MODEL_SIZE,
+model_size = MODEL_SIZE["SMALL"]  # Choose from MODEL_SIZE,
 
 data_augmentation_kwargs = dict(
     hsv_h = 0.0,
@@ -45,8 +47,8 @@ train_kwargs = dict(
     epochs = 300,
     imgsz = 640,
     batch = -1,
-    workers = 8,
-    lr0 = 0.1,
+    workers = 10,
+    lr0 = 0.05,
     device = "0",
     patience = 75,
     **data_augmentation_kwargs

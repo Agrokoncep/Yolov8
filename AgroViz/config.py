@@ -8,7 +8,7 @@ MODEL_SIZE = dict(
     XLARGE = "yolov8x.pt",
 )
 
-nb_freezed_layers = 5
+nb_freezed_layers = 5 # Number of layers to freeze (-1 to unfreeze)
 
 wandb = dict(
     api_key = '0a172795af06b84dd255b5192d3722a9d098af32',

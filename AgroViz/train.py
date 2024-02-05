@@ -23,7 +23,9 @@ if __name__ == '__main__':
                 // batch={config.train_kwargs.get('batch')} 
                 // epochs={config.train_kwargs.get('epochs')}  
                 // workers={config.train_kwargs.get('workers')} 
-                // n_freeze_layers={config.nb_freezed_layers}""",
+                // n_freeze_layers={config.nb_freezed_layers}
+                // local_folder_name={config.train_kwargs.get('name')}
+                """,
     )
     # Load a model
     model = YOLO(config.model_size)

@@ -25,6 +25,7 @@ dataset_abs_path = os.path.join(data["batch_datasets_folder"], data["dataset_nam
 
 model_size = MODEL_SIZE["SMALL"]  # Choose from MODEL_SIZE,
 
+# https://docs.ultralytics.com/fr/usage/cfg/#augmentation
 data_augmentation_kwargs = dict(
     hsv_h = 0.0,
     hsv_s = 0.0,

@@ -124,7 +124,7 @@ class ClassificationTrainer(BaseTrainer):
         for f in self.last, self.best:
             if f.exists():
                 strip_optimizer(f)  # strip optimizers
-                # TODO: validate best.pt after training completes
+                # TODO: validate batch1.pt after training completes
                 # if f is self.best:
                 #     LOGGER.info(f'\nValidating {f}...')
                 #     self.validator.args.save_json = True

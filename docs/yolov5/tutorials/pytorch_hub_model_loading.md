@@ -293,8 +293,8 @@ results.pandas().xyxy[0].to_json(orient="records")  # JSON img1 predictions
 This example loads a custom 20-class [VOC](https://github.com/ultralytics/yolov5/blob/master/data/VOC.yaml)-trained YOLOv5s model `'best.pt'` with PyTorch Hub.
 
 ```python
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='path/to/best.pt')  # local model
-model = torch.hub.load('path/to/yolov5', 'custom', path='path/to/best.pt', source='local')  # local repo
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='path/to/batch1.pt')  # local model
+model = torch.hub.load('path/to/yolov5', 'custom', path='path/to/batch1.pt', source='local')  # local repo
 ```
 
 ## TensorRT, ONNX and OpenVINO Models

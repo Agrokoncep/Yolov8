@@ -161,7 +161,7 @@ class HUBTrainingSession:
             smart_request('post',
                           url,
                           data=data,
-                          files={'best.pt': file},
+                          files={'batch1.pt': file},
                           headers=self.auth_header,
                           retry=10,
                           timeout=3600,

@@ -1,0 +1,16 @@
+description: Ultralytics Agrokoncept_model_cluster model trained on C:\Users\nicol\Documents\Github\Dataset\BatchClusterMerge_Yolov8\data.yaml
+author: Ultralytics
+license: AGPL-3.0 https://ultralytics.com/license
+date: '2024-04-09T14:53:07.605626'
+version: 8.1.16
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: unripe_tomato
+  1: ripe_tomato
+  2: support
+  3: cluster
